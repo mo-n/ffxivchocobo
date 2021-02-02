@@ -8,7 +8,7 @@ enum ColorGroup {
   Purple,
 }
 
-export interface Config {
+export interface Color {
   label: string;
   value: string;
   r: number;
@@ -17,7 +17,7 @@ export interface Config {
   group: ColorGroup;
 }
 
-const colorArray:Array<Config> = [
+const colorArray:Array<Color> = [
   {
     label: "素雪白",
     value: "snow-white",
@@ -712,7 +712,7 @@ const categories:Map<ColorGroup, {cn: string; value: string}> = new Map([
   }]
 ])
 
-const colours:Map<string, Config> = new Map();
+const colours:Map<string, Color> = new Map();
 
 colorArray.forEach(config => {
   colours.set(config.value, config);

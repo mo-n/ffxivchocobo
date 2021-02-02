@@ -1,12 +1,12 @@
 
 
 export enum Fruit {
-  apple,
-  pear,
-  berrie,
-  plum,
-  valfruit,
-  pineapple
+  Apple,
+  Pear,
+  Berrie,
+  Plum,
+  Valfruit,
+  Pineapple
 };
 
 export interface FruitInfo {
@@ -17,37 +17,37 @@ export interface FruitInfo {
 }
 
 const fruits: Map<Fruit, FruitInfo> = new Map([[
-  Fruit.apple, {
+  Fruit.Apple, {
     "zh-hans": '塞尔法特尔沙果',
     r: +5,
     g: -5,
     b: -5,
   }], [
-  Fruit.pear, {
+  Fruit.Pear, {
     "zh-hans": '辉鳞油梨',
     r: -5,
     g: +5,
     b: -5,
   }], [
-  Fruit.berrie, {
+  Fruit.Berrie, {
     "zh-hans": '奥·哥摩罗浆果',
     r: -5,
     g: -5,
     b: +5,
   }], [
-  Fruit.plum, {
+  Fruit.Plum, {
     "zh-hans": '多玛青梅',
     r: -5,
     g: +5,
     b: +5,
   }], [
-  Fruit.valfruit, {
+  Fruit.Valfruit, {
     "zh-hans": '瓦尔醋栗',
     r: +5,
     g: -5,
     b: +5,
   }],[
-  Fruit.pineapple, {
+  Fruit.Pineapple, {
     "zh-hans": '谢尔达莱凤梨',
     r: +5,
     g: +5,
