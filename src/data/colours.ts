@@ -681,10 +681,41 @@ const colorArray:Array<Config> = [
   },
 ];
 
-const colorList:Map<string, Config> = new Map();
+const categories:Map<ColorGroup, {cn: string; value: string}> = new Map([
+  [ColorGroup.White, {
+    cn: '白',
+    value: 'gray-100'
+  }],
+  [ColorGroup.Red, {
+    cn: '红',
+    value: 'red-700'
+  }],
+  [ColorGroup.Brown, {
+    cn: '棕',
+    value: 'yellow-800'
+  }],
+  [ColorGroup.Yellow, {
+    cn: '黄',
+    value: 'yellow-300'
+  }],
+  [ColorGroup.Green, {
+    cn: '绿',
+    value: 'green-400'
+  }],
+  [ColorGroup.Blue, {
+    cn: '蓝',
+    value: 'blue-500'
+  }],
+  [ColorGroup.Purple, {
+    cn: '紫',
+    value: 'purple-700'
+  }]
+])
+
+const colours:Map<string, Config> = new Map();
 
 colorArray.forEach(config => {
-  colorList.set(config.value, config);
+  colours.set(config.value, config);
 })
 
-export { ColorGroup, colorList };
+export { ColorGroup, colours, categories };
