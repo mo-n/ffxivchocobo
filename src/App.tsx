@@ -1,15 +1,18 @@
 import React from 'react';
-import Tabs from 'components/tabs';
-import Select from 'components/select';
-import Calculator from './Calculator';
-import './App.css';
+import { Switch, Route } from 'react-router-dom';
+import Calculator from 'components/calculator';
 
 function App() {
   return (
     <div>
-      <Select></Select>
-      <Tabs></Tabs>
-      <button className="w-full px-3 py-2 border rounded-md focus:outline-none bg-indigo-500 text-white">计算</button>
+      <header></header>
+      <main>
+        <Switch>
+          <Route exact path='/' render={(props) => (<Calculator />)} />
+          {/* <Route exact /> */}
+        </Switch>
+      </main>
+      <footer></footer>
     </div>
   );
 }
