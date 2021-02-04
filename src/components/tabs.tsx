@@ -1,53 +1,79 @@
-import React, { useState } from 'react';
-import { ColorGroup, colours, categories } from 'data/colours';
+import React  from "react";
+import { ColorGroup, colours, categories, Color } from "data/colours";
 
-function Tabs() {
-  const [group, setGroup] = useState(ColorGroup.White)
-  const [color, setColor] = useState(colours.get('snow-white'))
+interface Props {
+  label: string;
+  selected: string;
+  updateColour: Function;
+}
 
-  const handleSwitchGroup = function(_k:ColorGroup) {
-    setGroup(_k)
-  }
+function Tabs(props: Props) {
+  const { label, selected, updateColour } = props;
+  const group = colours.get(selected)?.group
 
-  const handleSwitchColor = (_c:typeof color) => {
-    return () => setColor(_c)
-  }
+  const handleSwitchGroup = function (_k: ColorGroup, event:React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+    event.preventDefault();
+    for (const [key, c] of colours) {
+      if (c.group === _k) {
+        updateColour(key);
+        return;
+      }
+    }
+  };
 
-  return(
+  const handleSwitchColor = (_c: Color, event:React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    event.preventDefault();
+    updateColour(_c.value);
+  };
+
+  return (
     <div>
-      <div className="flex">
-        {
-          Array.from(categories.keys()).map((key) => (
-            <button key={key} onClick={() => handleSwitchGroup(key)} className={`
+      <label className="block sm:text-sm font-medium text-gray-700">
+        {label}
+      </label>
+      <div className="flex mt-2">
+        {Array.from(categories.keys()).map((key) => (
+          <button
+            key={key}
+            onClick={handleSwitchGroup.bind(null, key)}
+            className={`
               bg-${categories.get(key)!.value}
               w-10 h-10
-              ml-1 mr-1
-              border-2 focus:outline-none rounded-full
-              ${group === key ? `border-blue-500` : 'border-transparent'}
-            `}>
-              <span className="text-transparent">{categories.get(key)!.cn}</span>
-            </button>
-          ))
-        }
+              mx-1
+              border-4 focus:outline-none rounded-full
+              ${group === key ? `border-blue-200` : "border-transparent"}
+            `}
+          >
+            <span className="text-transparent">{categories.get(key)!.cn}</span>
+          </button>
+        ))}
       </div>
-      <div style={{ minHeight: '4.75rem' }} className="mt-4 pl-2">
-        {
-          Array.from(colours.values())
-            .filter(colour => colour.group === group)
-            .map(colour => (
-              <button key={colour.value}
-              onClick={handleSwitchColor(colour)}
-              style={{background: `rgb(${colour.r}, ${colour.b}, ${colour.g})`, color: `rgb(${colour.r}, ${colour.b}, ${colour.g})`}} className={`
+      <div style={{ minHeight: "4.75rem" }} className="mt-4 pl-2">
+        {Array.from(colours.values())
+          .filter((colour) => colour.group === group)
+          .map((colour) => (
+            <button
+              key={colour.value}
+              onClick={handleSwitchColor.bind(null, colour)}
+              style={{
+                background: `rgb(${colour.r}, ${colour.g}, ${colour.b})`,
+                color: `rgb(${colour.r}, ${colour.g}, ${colour.b})`,
+              }}
+              className={`
                 w-8 h-8
                 ml-1 mr-1
                 ring-2 ring-offset-1 focus:outline-none shadow-2xl
-                ${color === colour ? 'ring-current' : 'ring-transparent'}
-            `}></button>
-            ))
-        }
+                ${
+                  selected === colour.value
+                    ? "ring-current"
+                    : "ring-transparent"
+                }
+            `}
+            ></button>
+          ))}
       </div>
     </div>
-  )
+  );
 }
 
 export default Tabs;
