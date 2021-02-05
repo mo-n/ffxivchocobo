@@ -22,7 +22,7 @@ class Calculator {
   }
 
   addOrder(times: number, fruits: Array<Fruit>) {
-    for (let i = 1; i < Math.abs(times); i++) {
+    for (let i = 1; i <= Math.abs(times); i++) {
       this.order.push(...fruits);
     }
   }
@@ -55,9 +55,9 @@ class Calculator {
       gDiff = 10 * Math.round(gDiffRaw / 10),
       bDiff = 10 * Math.round(bDiffRaw / 10);
     // remainders
-    const rRem = 5 * Math.round((rDiff - rDiffRaw) / 5),
-      gRem = 5 * Math.round((gDiff - gDiffRaw) / 5),
-      bRem = 5 * Math.round((bDiff - bDiffRaw) / 5);
+    const rRem = 5 * Math.round((rDiffRaw - rDiff) / 5),
+      gRem = 5 * Math.round((gDiffRaw - gDiff) / 5),
+      bRem = 5 * Math.round((bDiffRaw - bDiff) / 5);
 
     if (rDiff > 0) {
       this.addOrder(rDiff / 10, [Fruit.Valfruit, Fruit.Pineapple]);
@@ -65,8 +65,8 @@ class Calculator {
       this.addFruit(rDiff / 10, Fruit.Pineapple);
     } else {
       this.addOrder(rDiff / 10, [Fruit.Berrie, Fruit.Pear]);
-      this.addFruit(rDiff / 10, Fruit.Berrie);
-      this.addFruit(rDiff / 10, Fruit.Pear);
+      this.addFruit(-rDiff / 10, Fruit.Berrie);
+      this.addFruit(-rDiff / 10, Fruit.Pear);
     }
 
     if (gDiff > 0) {
@@ -75,8 +75,8 @@ class Calculator {
       this.addFruit(gDiff / 10, Fruit.Plum);
     } else {
       this.addOrder(gDiff / 10, [Fruit.Apple, Fruit.Berrie]);
-      this.addFruit(gDiff / 10, Fruit.Apple);
-      this.addFruit(gDiff / 10, Fruit.Berrie);
+      this.addFruit(-gDiff / 10, Fruit.Apple);
+      this.addFruit(-gDiff / 10, Fruit.Berrie);
     }
 
     if (bDiff > 0) {
@@ -85,8 +85,8 @@ class Calculator {
       this.addFruit(bDiff / 10, Fruit.Valfruit);
     } else {
       this.addOrder(bDiff / 10, [Fruit.Apple, Fruit.Pear]);
-      this.addFruit(bDiff / 10, Fruit.Apple);
-      this.addFruit(bDiff / 10, Fruit.Pear);
+      this.addFruit(-bDiff / 10, Fruit.Apple);
+      this.addFruit(-bDiff / 10, Fruit.Pear);
     }
 
     if (rRem && gRem && bRem) {
@@ -101,7 +101,6 @@ class Calculator {
         }
       }
     }
-
     // remove redundant fruit
     const apple = this.fruits.get(Fruit.Apple)!,
       pear = this.fruits.get(Fruit.Pear)!,
