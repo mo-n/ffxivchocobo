@@ -1,38 +1,40 @@
-.App {
-  text-align: center;
+.fruit-checkout:checked + label {
+  @apply bg-gray-200;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.fruit-checkout:checked + label span::after {
+  @apply block top-2/4 left-0 right-0 bg-green-800 transform -translate-y-1/2;
+
+  content: '';
+  position: absolute;
+  height: 4px;
+  transition: transform 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.fruit-checkout:checked + label img {
+  filter: grayscale(100%);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* .fruit-checkout + label {
+  position: relative;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.fruit-checkout + label::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle, #ccc 10%, transparent 10.1%);
+  transform: scale(100);
+  opacity: 0;
+  transition: all 2s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.fruit-checkout + label:active::after {
+  transform: scale(0);
+  opacity: 1;
+  transition: 0s;
+} */

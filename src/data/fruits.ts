@@ -1,5 +1,3 @@
-
-
 export enum Fruit {
   Apple,
   Pear,
