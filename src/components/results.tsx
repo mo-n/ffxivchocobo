@@ -43,7 +43,7 @@ function Results() {
 
           if (number > 0) {
             return (
-              <li key={fruitkey} className="align-middle text-base font-medium">
+              <li key={fruitkey} className="align-bottom text-base font-medium">
                 <img
                   src={`/fruits/${fruitname}.png`}
                   className="inline-block w-6 h-6 rounded-md mr-2"
