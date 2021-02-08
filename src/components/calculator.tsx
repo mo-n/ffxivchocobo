@@ -2,19 +2,21 @@ import { useState } from 'react';
 import Tabs from "components/tabs";
 import Select from "components/select";
 import { useHistory } from "react-router-dom";
+import { eventNames } from 'process';
 
 function Calculator() {
   const [ fromColour, setFromColour ] = useState('desert-yellow')
   const [ toColour, setToColour ] = useState('snow-white')
   let history = useHistory();
 
-  const handleClick = function () {
+  const handleClick = function (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+    event.stopPropagation();
     history.push(`/${fromColour}/${toColour}`);
   }
 
   return (
     <div className="max-w-screen-sm mx-auto">
-      <form onSubmit={() => (false)}>
+      <form>
         <Select label="当前颜色" name="from-colour" selected={fromColour} updateColour={setFromColour} />
         <Tabs label="选中你想要的颜色" selected={toColour} updateColour={setToColour} />
         <img src={`/colours/${fromColour}.png`} alt=""/>

@@ -6,9 +6,12 @@ import 'App.css';
 
 function App() {
   return (
-    <div className="bg-gray-200">
-      <header></header>
+    <div className="bg-gray-100 min-h-screen">
+      <header>
+
+      </header>
       <main className="max-w-screen-sm mx-auto">
+        <h1>陆行鸟染色计算器</h1>
         <Switch>
           <Route exact path="/" render={(props) => <Calculator />} />
           <Route exact path="/:from/:to" render={(props) => <Results/>} />

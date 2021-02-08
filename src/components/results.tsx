@@ -21,12 +21,19 @@ function Results() {
 
   return (
     <div>
-      <h1>陆行鸟染色计算器</h1>
-      <p>
-        <span>{fromColor.label}</span>
-        <Right />
-        <span>{}</span>
-        <span>{toColor.label}</span>
+      <p
+        className="font-serif text-shadow-md font-extrabold text-4xl"
+        style={{ textShadow: "1px 1px 1px #515151" }}
+      >
+        <span
+          style={{ color: `rgb(${fromColor.r} ${fromColor.g} ${fromColor.b})` }}
+        >
+          {fromColor.label}
+        </span>
+        <Right className="inline-block w-10 h-10" />
+        <span style={{ color: `rgb(${toColor.r} ${toColor.g} ${toColor.b})` }}>
+          {toColor.label}
+        </span>
       </p>
       <p>一次性喂入以下食物改变陆行鸟的颜色</p>
       <ul>
@@ -36,9 +43,17 @@ function Results() {
 
           if (number > 0) {
             return (
-              <li key={fruitkey}>
-                <img src={`/fruits/${fruitname}.png`} alt={fruitname} />
-                <span>{fruit["zh-hans"]}</span>x<span>{number}</span>
+              <li key={fruitkey} className="align-middle text-base font-medium">
+                <img
+                  src={`/fruits/${fruitname}.png`}
+                  className="inline-block w-6 h-6 rounded-md mr-2"
+                  alt={fruitname}
+                />
+                <span className="underline text-blue-500">
+                  {fruit["zh-hans"]}
+                </span>
+                <span className="px-2">x</span>
+                <span className="">{number}</span>
               </li>
             );
           }
