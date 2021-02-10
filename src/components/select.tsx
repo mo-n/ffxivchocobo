@@ -19,13 +19,13 @@ function Select(props: Props) {
 
   return (
     <div className="mb-2">
-      <label htmlFor={name} className="block sm:text-sm font-medium text-gray-700">{label}</label>
+      <label htmlFor={name} className="block sm:text-base font-medium text-gray-900 my-4">{label}</label>
       <select
         name={name}
         id={name}
         value={selected}
         onChange={handleChange}
-        className="w-full block border rounded-md mt-1 px-3 py-2 border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+        className="w-full block border rounded-md mt-1 px-3 py-2 border-gray-200 bg-white focus:outline-none focus:ring-indigo-500 focus:border-blue-500 sm:text-sm"
       >
         {Array.from(colours.values()).map((c) => (
           <option key={c.value} value={c.value}>{c.label}</option>

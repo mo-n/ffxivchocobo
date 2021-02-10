@@ -2,7 +2,6 @@ import { useState } from 'react';
 import Tabs from "components/tabs";
 import Select from "components/select";
 import { useHistory } from "react-router-dom";
-import { eventNames } from 'process';
 
 function Calculator() {
   const [ fromColour, setFromColour ] = useState('desert-yellow')
@@ -17,11 +16,12 @@ function Calculator() {
   return (
     <div className="max-w-screen-sm mx-auto">
       <form>
+        <p className="my-1">根据以下表单计算从当前颜色到目标颜色所需要的陆行鸟果实</p>
         <Select label="当前颜色" name="from-colour" selected={fromColour} updateColour={setFromColour} />
         <Tabs label="选中你想要的颜色" selected={toColour} updateColour={setToColour} />
-        <img src={`/colours/${fromColour}.png`} alt=""/>
+        <img className="mx-auto" src={`/colours/${toColour}.png`} alt={toColour} />
         <Select label="目标颜色" name="to-colour" selected={toColour} updateColour={setToColour} />
-        <button onClick={handleClick} className="w-full px-3 py-2 border rounded-md focus:outline-none bg-indigo-500 text-white">计算</button>
+        <button onClick={handleClick} className="w-full mt-6 px-3 py-2 border rounded-md focus:outline-none bg-blue-500 text-white">计算</button>
       </form>
     </div>
   );

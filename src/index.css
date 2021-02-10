@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+summary.list-none::-webkit-details-marker {
+  display: none;
+}

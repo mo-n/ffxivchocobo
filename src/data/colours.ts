@@ -206,7 +206,7 @@ const colorArray:Array<Color> = [
   },
   {
     label: "奥猴棕",
-    value: "Opo-opo-brown",
+    value: "opo-opo-brown",
     r: 123,
     g: 92,
     b: 45,
@@ -684,7 +684,7 @@ const colorArray:Array<Color> = [
 const categories:Map<ColorGroup, {cn: string; value: string}> = new Map([
   [ColorGroup.White, {
     cn: '白',
-    value: 'gray-100'
+    value: 'white'
   }],
   [ColorGroup.Red, {
     cn: '红',

@@ -28,7 +28,7 @@ function Tabs(props: Props) {
 
   return (
     <div>
-      <label className="block sm:text-sm font-medium text-gray-700">
+      <label className="block sm:text-base font-medium text-gray-900 my-3">
         {label}
       </label>
       <div className="flex mt-2">
@@ -60,9 +60,9 @@ function Tabs(props: Props) {
                 color: `rgb(${colour.r}, ${colour.g}, ${colour.b})`,
               }}
               className={`
-                w-8 h-8
+                w-7 h-7
                 ml-1 mr-1
-                ring-2 ring-offset-1 focus:outline-none shadow-2xl
+                ring-2 ring-offset-1 focus:outline-none shadow
                 ${
                   selected === colour.value
                     ? "ring-current"
