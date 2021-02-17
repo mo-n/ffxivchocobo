@@ -5,3 +5,21 @@
 summary.list-none::-webkit-details-marker {
   display: none;
 }
+
+body {
+  width: 100vw;
+  overflow: hidden;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+:root {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+:root body {
+  position: absolute;
+}

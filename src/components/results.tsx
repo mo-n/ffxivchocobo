@@ -99,13 +99,13 @@ function Results() {
         <p className="my-2 text-gray-700">注：喂陆行鸟拉札罕柠檬可使其变回沙漠黄。</p>
       </div>
       <details onToggle={handleToggle}>
-        <summary className="flex items-center relative justify-center my-4 mx-auto bg-blue-500 rounded-md text-white list-none focus:outline-none cursor-pointer text-center w-full py-2">
+        <summary className="flex items-center relative justify-center mt-4 mx-auto bg-blue-500 rounded-md text-white list-none focus:outline-none cursor-pointer text-center w-full py-2">
           <span className="flex-auto">推荐喂食顺序</span>
           {
             toggle ? <ChevronRight className="absolute right-3 w-4 h-4" /> : <ChevronDown className="absolute right-3 w-4 h-4" />
           }
         </summary>
-        <ul>
+        <ul className="mt-4">
           {order.map((fruitKey, index) => {
             const fruit = fruitsList.get(fruitKey)!;
             const fruitname = Fruit[fruitKey];

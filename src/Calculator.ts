@@ -71,8 +71,8 @@ class Calculator {
 
     if (gDiff > 0) {
       this.addOrder(gDiff / 10, [Fruit.Pineapple, Fruit.Plum]);
-      this.addFruit(gDiff / 10, Fruit.Pineapple);
       this.addFruit(gDiff / 10, Fruit.Plum);
+      this.addFruit(gDiff / 10, Fruit.Pineapple);
     } else {
       this.addOrder(gDiff / 10, [Fruit.Apple, Fruit.Berrie]);
       this.addFruit(-gDiff / 10, Fruit.Apple);
