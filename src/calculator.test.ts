@@ -18,41 +18,41 @@ function* calcResult() {
 }
 
 function iscoloring(from: string, order: Array<Fruit>) {
-  const fromColor = {
-    r: colours.get(from)!.r,
-    g: colours.get(from)!.g,
-    b: colours.get(from)!.b,
+  const resultColor = {
+    R: colours.get(from)!.R,
+    G: colours.get(from)!.G,
+    B: colours.get(from)!.B,
   };
 
   order.forEach((_key) => {
     const fruit = fruits.get(_key)!;
-    fromColor.r += fruit.r;
-    fromColor.g += fruit.g;
-    fromColor.b += fruit.b;
+    resultColor.R += fruit.R;
+    resultColor.G += fruit.G;
+    resultColor.B += fruit.B;
   });
-  //raisin-brown vs chestnut-brown
-  let toKey = "",
+
+  let resultKey = "",
     diff = -1;
   colours.forEach((color, _key) => {
     const _d = Math.sqrt(
-      (fromColor.b - color.b) ** 2 +
-        (fromColor.g - color.g) ** 2 +
-        (fromColor.r - color.r) ** 2
+      (resultColor.R - color.R) ** 2 +
+      (resultColor.B - color.B) ** 2 +
+      (resultColor.G - color.G) ** 2
     );
     if (diff === -1 || _d < diff) {
       diff = _d;
-      toKey = _key;
+      resultKey = _key;
     }
   });
 
-  return toKey;
+  return resultKey;
 }
 
 describe("colours calc", () => {
-  for (let { fromKey, toKey, order, fruits } of calcResult()) {
-    const calcColor = iscoloring(fromKey, order);
+  for (let { fromKey, toKey, order } of calcResult()) {
+    const resultColorKey = iscoloring(fromKey, order);
     test(`${fromKey} to ${toKey}`, () => {
-      expect(Object.is(toKey, calcColor)).toBe(true);
+      expect(Object.is(toKey, resultColorKey)).toBe(true);
     })
   }
 });

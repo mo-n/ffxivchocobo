@@ -47,9 +47,9 @@ class Calculator {
 
   calc() {
     // raw
-    const rDiffRaw = this._to.r - this._from.r,
-      gDiffRaw = this._to.g - this._from.g,
-      bDiffRaw = this._to.b - this._from.b;
+    const rDiffRaw = this._to.R - this._from.R,
+      gDiffRaw = this._to.G - this._from.G,
+      bDiffRaw = this._to.B - this._from.B;
     // diff
     const rDiff = 10 * Math.round(rDiffRaw / 10),
       gDiff = 10 * Math.round(gDiffRaw / 10),
@@ -92,9 +92,9 @@ class Calculator {
     if (rRem && gRem && bRem) {
       for (const [fruit, fruitInfo] of fruits) {
         if (
-          fruitInfo.r === rRem &&
-          fruitInfo.g === gRem &&
-          fruitInfo.b === bRem
+          fruitInfo.R === rRem &&
+          fruitInfo.G === gRem &&
+          fruitInfo.B === bRem
         ) {
           this.addOrder(1, [fruit]);
           this.addFruit(1, fruit);

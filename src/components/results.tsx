@@ -37,12 +37,12 @@ function Results() {
         style={{ textShadow: "1px 1px 1px #515151" }}
       >
         <span
-          style={{ color: `rgb(${fromColor.r} ${fromColor.g} ${fromColor.b})` }}
+          style={{ color: `rgb(${fromColor.R} ${fromColor.G} ${fromColor.B})` }}
         >
           {fromColor.label}
         </span>
         <Right className="inline-block w-10 h-10 align-text-bottom" />
-        <span style={{ color: `rgb(${toColor.r} ${toColor.g} ${toColor.b})` }}>
+        <span style={{ color: `rgb(${toColor.R} ${toColor.G} ${toColor.B})` }}>
           {toColor.label}
         </span>
       </p>

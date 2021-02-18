@@ -56,8 +56,8 @@ function Tabs(props: Props) {
               key={colour.value}
               onClick={handleSwitchColor.bind(null, colour)}
               style={{
-                background: `rgb(${colour.r}, ${colour.g}, ${colour.b})`,
-                color: `rgb(${colour.r}, ${colour.g}, ${colour.b})`,
+                background: `rgb(${colour.R}, ${colour.G}, ${colour.B})`,
+                color: `rgb(${colour.R}, ${colour.G}, ${colour.B})`,
               }}
               className={`
                 w-7 h-7
