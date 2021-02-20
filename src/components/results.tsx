@@ -56,7 +56,7 @@ function Results() {
             return (
               <li key={fruitkey} className="text-base font-medium mb-2">
                 <img
-                  src={`/fruits/${fruitname}.png`}
+                  src={`${process.env.PUBLIC_URL}/fruits/${fruitname}.png`}
                   className="inline-block w-6 h-6 rounded-md mr-2 relative -top-0.5"
                   alt={fruitname}
                 />
@@ -78,7 +78,7 @@ function Results() {
         })}
       </ul>
       <div>
-        <img className="mx-auto my-10" src={`/colours/${to}.png`} alt="" />
+        <img className="mx-auto my-10" src={`${process.env.PUBLIC_URL}/colours/${to}.png`} alt="" />
       </div>
       <div className="prose">
         <p className="my-2">
@@ -122,7 +122,7 @@ function Results() {
                   className="bg-white py-2 px-4 mb-1 flex rounded-sm shadow-md hover:bg-gray-200 cursor-pointer"
                 >
                   <img
-                    src={`/fruits/${fruitname}.png`}
+                    src={`${process.env.PUBLIC_URL}/fruits/${fruitname}.png`}
                     className="block w-6 h-6 rounded-md"
                     alt=""
                   />
