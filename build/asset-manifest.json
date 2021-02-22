@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/chocobo_colour/static/css/main.b05d5591.chunk.css",
-    "main.js": "/chocobo_colour/static/js/main.c6fb9b29.chunk.js",
-    "main.js.map": "/chocobo_colour/static/js/main.c6fb9b29.chunk.js.map",
+    "main.js": "/chocobo_colour/static/js/main.c11311d7.chunk.js",
+    "main.js.map": "/chocobo_colour/static/js/main.c11311d7.chunk.js.map",
     "runtime-main.js": "/chocobo_colour/static/js/runtime-main.e97cf67d.js",
     "runtime-main.js.map": "/chocobo_colour/static/js/runtime-main.e97cf67d.js.map",
     "static/js/2.122713ed.chunk.js": "/chocobo_colour/static/js/2.122713ed.chunk.js",
@@ -22,6 +22,6 @@
     "static/js/runtime-main.e97cf67d.js",
     "static/js/2.122713ed.chunk.js",
     "static/css/main.b05d5591.chunk.css",
-    "static/js/main.c6fb9b29.chunk.js"
+    "static/js/main.c11311d7.chunk.js"
   ]
 }
