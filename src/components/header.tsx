@@ -11,7 +11,7 @@ function Header() {
       </Link>
       <div className="flex-auto"></div>
       <a
-        href="https://github.com/mo-n/ffxivchocobo"
+        href="https://github.com/mo-n/ffxivchocobo" target="_blank" rel="noreferrer"
         className="inline-flex w-6 h-6 p-2 box-content cursor-pointer text-white"
       >
         <GithubIcon />

@@ -18,8 +18,8 @@ function App() {
       </main>
       <footer className="text-center text-sm text-gray-500 my-2">
         <p>最终幻想14陆行鸟染色计算器<span className="px-1">·</span>
-          <a href="https://github.com/mo-n/ffxivchocobo/blob/master/LICENSE.txt">License</a><span className="px-1">·</span>
-          <a href="https://github.com/mo-n/ffxivchocobo">Code</a>
+          <a href="https://github.com/mo-n/ffxivchocobo/blob/master/LICENSE.txt" target="_blank" rel="noreferrer">License</a><span className="px-1">·</span>
+          <a href="https://github.com/mo-n/ffxivchocobo" target="_blank" rel="noreferrer">Code</a>
         </p>
       </footer>
       <div className="h-1"></div>
