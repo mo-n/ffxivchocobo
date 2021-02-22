@@ -37,7 +37,7 @@ function Tabs(props: Props) {
             key={key}
             onClick={handleSwitchGroup.bind(null, key)}
             className={`
-              bg-${categories.get(key)!.value}
+              ${categories.get(key)!.value}
               w-10 h-10
               mx-1
               border-4 focus:outline-none rounded-full

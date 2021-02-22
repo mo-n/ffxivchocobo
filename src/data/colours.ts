@@ -684,31 +684,31 @@ const colorArray:Array<Color> = [
 const categories:Map<ColorGroup, {cn: string; value: string}> = new Map([
   [ColorGroup.White, {
     cn: '白',
-    value: 'white'
+    value: 'bg-white'
   }],
   [ColorGroup.Red, {
     cn: '红',
-    value: 'red-700'
+    value: 'bg-red-700'
   }],
   [ColorGroup.Brown, {
     cn: '棕',
-    value: 'yellow-800'
+    value: 'bg-yellow-800'
   }],
   [ColorGroup.Yellow, {
     cn: '黄',
-    value: 'yellow-300'
+    value: 'bg-yellow-300'
   }],
   [ColorGroup.Green, {
     cn: '绿',
-    value: 'green-400'
+    value: 'bg-green-400'
   }],
   [ColorGroup.Blue, {
     cn: '蓝',
-    value: 'blue-500'
+    value: 'bg-blue-500'
   }],
   [ColorGroup.Purple, {
     cn: '紫',
-    value: 'purple-700'
+    value: 'bg-purple-700'
   }]
 ])
 

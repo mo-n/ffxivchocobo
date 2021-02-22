@@ -49,7 +49,7 @@ function Results() {
       <p className="my-3">一次性喂入以下食物改变陆行鸟的颜色</p>
       <ul>
         {Array.from(fruits.entries()).map(([fruitkey, number]) => {
-          const fruitname = Fruit[fruitkey];
+          const fruitname = Fruit[fruitkey].toLowerCase();
           const fruit = fruitsList.get(fruitkey)!;
 
           if (number > 0) {
@@ -108,7 +108,7 @@ function Results() {
         <ul className="mt-4">
           {order.map((fruitKey, index) => {
             const fruit = fruitsList.get(fruitKey)!;
-            const fruitname = Fruit[fruitKey];
+            const fruitname = Fruit[fruitKey].toLowerCase();
             return (
               <ol key={index}>
                 <input
