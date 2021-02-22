@@ -31,7 +31,7 @@ function Tabs(props: Props) {
       <label className="block sm:text-base font-medium text-gray-900 my-3">
         {label}
       </label>
-      <div className="flex mt-2">
+      <div className="flex mt-2 select-none">
         {Array.from(categories.keys()).map((key) => (
           <button
             key={key}
