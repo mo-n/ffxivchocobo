@@ -14,27 +14,3 @@
 .fruit-checkout:checked + label img {
   filter: grayscale(100%);
 }
-
-/* .fruit-checkout + label {
-  position: relative;
-  overflow: hidden;
-}
-
-.fruit-checkout + label::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: radial-gradient(circle, #ccc 10%, transparent 10.1%);
-  transform: scale(100);
-  opacity: 0;
-  transition: all 2s;
-}
-
-.fruit-checkout + label:active::after {
-  transform: scale(0);
-  opacity: 1;
-  transition: 0s;
-} */
