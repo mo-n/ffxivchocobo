@@ -1,17 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import { StrictMode } from "react";
+import ReactDOM from "react-dom/client";
 import { HashRouter as Router } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
+const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
+
+root.render(
+  <StrictMode>
     <Router>
       <App />
     </Router>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a functionA

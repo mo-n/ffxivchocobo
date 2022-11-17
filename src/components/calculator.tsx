@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import Tabs from "components/tabs";
 import Select from "components/select";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Calculator() {
   const [ fromColour, setFromColour ] = useState('desert-yellow')
   const [ toColour, setToColour ] = useState('snow-white')
-  let history = useHistory();
+  let history = useNavigate();
 
   const handleClick = function (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
     event.stopPropagation();
-    history.push(`/${fromColour}/${toColour}`);
+    history(`/${fromColour}/${toColour}`);
   }
 
   return (

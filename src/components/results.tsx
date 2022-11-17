@@ -1,4 +1,4 @@
-import { useRouteMatch, match } from "react-router-dom";
+import { useMatch, PathMatch } from "react-router-dom";
 import Calculator from "calculator";
 import fruitsList, { Fruit } from "data/fruits";
 import { colours } from "data/colours";
@@ -13,10 +13,11 @@ interface MatchParams {
 }
 
 function Results() {
-  const match = useRouteMatch("/:from/:to") as match<MatchParams>;
   const [toggle, setToggle] = useState(false);
+  const { params } = useMatch('/:from/:to') as PathMatch<"from" | "to">;
 
-  const { from, to } = match.params;
+  const { to, from } = params as MatchParams
+
   const fromColor = colours.get(from)!,
     toColor = colours.get(to)!;
 
