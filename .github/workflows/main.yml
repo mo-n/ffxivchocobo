@@ -10,20 +10,23 @@ jobs:
   # 开始打包
   Build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [15]
 
     steps:
-    - uses: actions/checkout@v3
-    - uses: pnpm/action-setup@v2.2.4
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - uses: pnpm/action-setup@v4
+      name: Install pnpm
       with:
-        version: 7
-    - name: Use Node.js 18.12.1
-      uses: actions/setup-node@v3
+        version: 9
+        run_install: false
+
+    - name: Install Node.js
+      uses: actions/setup-node@v4
       with:
-        node-version: 18.12.1
+        node-version: 20
         cache: 'pnpm'
+
     - name: Install dependencies
       run: pnpm install && pnpm build
 
