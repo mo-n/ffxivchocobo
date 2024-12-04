@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="bg-gray-100 min-h-screen">
       <Header />
-      <main className="max-w-screen-sm mx-auto px-4 md:px-0" style={{paddingLeft: "calc(100vw - 100%)" }}>
+      <main className="max-w-screen-sm mx-auto px-4 sm:px-2">
         <h1 className="text-2xl mt-6 mb-8">FFXIV 陆行鸟染色计算器</h1>
         <Routes>
           <Route path="/" element={<Calculator />} />

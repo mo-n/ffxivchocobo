@@ -128,7 +128,7 @@ const colorArray:Array<Color> = [
     value: "blood-red",
     R: 145,
     G: 59,
-    B: 48,
+    B: 39,
     group: ColorGroup.Red,
   },
   {
@@ -417,9 +417,9 @@ const colorArray:Array<Color> = [
   {
     label: "苹果绿",
     value: "apple-green",
-    R: 149,
-    G: 174,
-    B: 92,
+    R: 155,
+    G: 179,
+    B: 99,
     group: ColorGroup.Green,
   },
   {
