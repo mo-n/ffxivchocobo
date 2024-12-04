@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/ffxivchocobo/static/css/main.43640b23.css",
-    "main.js": "/ffxivchocobo/static/js/main.698ee02b.js",
-    "static/js/495.f248b1f2.chunk.js": "/ffxivchocobo/static/js/495.f248b1f2.chunk.js",
+    "main.css": "/ffxivchocobo/static/css/main.d105619b.css",
+    "main.js": "/ffxivchocobo/static/js/main.93b35c69.js",
+    "static/js/166.a5b39100.chunk.js": "/ffxivchocobo/static/js/166.a5b39100.chunk.js",
     "static/media/github.svg": "/ffxivchocobo/static/media/github.8c2c333c40b96df152ae057a38a2dc88.svg",
     "index.html": "/ffxivchocobo/index.html",
     "static/media/home.svg": "/ffxivchocobo/static/media/home.e5aeb1786f122692c2c420a621519940.svg",
     "static/media/chevron-down.svg": "/ffxivchocobo/static/media/chevron-down.013136ce053f033eb31204f12442d591.svg",
     "static/media/chevron-right.svg": "/ffxivchocobo/static/media/chevron-right.a03747b336911a2f77bb636ddb8f2c22.svg",
     "static/media/right.svg": "/ffxivchocobo/static/media/right.a03747b336911a2f77bb636ddb8f2c22.svg",
-    "main.43640b23.css.map": "/ffxivchocobo/static/css/main.43640b23.css.map",
-    "main.698ee02b.js.map": "/ffxivchocobo/static/js/main.698ee02b.js.map",
-    "495.f248b1f2.chunk.js.map": "/ffxivchocobo/static/js/495.f248b1f2.chunk.js.map"
+    "main.d105619b.css.map": "/ffxivchocobo/static/css/main.d105619b.css.map",
+    "main.93b35c69.js.map": "/ffxivchocobo/static/js/main.93b35c69.js.map",
+    "166.a5b39100.chunk.js.map": "/ffxivchocobo/static/js/166.a5b39100.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.43640b23.css",
-    "static/js/main.698ee02b.js"
+    "static/css/main.d105619b.css",
+    "static/js/main.93b35c69.js"
   ]
 }
